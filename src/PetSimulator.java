@@ -6,7 +6,7 @@ public class PetSimulator {
 
   public PetSimulator() {
     scanner = new Scanner(System.in);
-    // choosePet();
+    choosePet();
   }
 
   private void choosePet() {
@@ -44,7 +44,7 @@ public class PetSimulator {
       if (pet instanceof Dog) ((Dog) pet).bark();
       else if (pet instanceof Cat) ((Cat) pet).meow();
       else throw new InvalidActionException("Pet can't do that!");
-
+      case 5: pet.setHealth(0);break;
     
       default: throw new InvalidActionException("Invalid Choice!");
     }
