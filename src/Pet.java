@@ -33,4 +33,23 @@ public abstract class Pet{
     setHunger(getHunger()+10);
     System.out.println("Pet takes a nap");
   }
+
+  public void play(){
+    setMood(getMood()+20);
+    setHunger(getHunger()+15);
+    setMood(getMood()+5);
+    System.out.println("Pet plays happily.");
+  }
+
+  public abstract void evolve();
+
+  public void decayStats(){
+    setHunger(getHunger() +5);
+    setMood(getMood()-5);
+    setHealth(getHealth()-2);
+  }
+
+  public void displayStats(){
+    System.out.println("Hunger: " + hunger + ", Mood: " + mood + ", Health: " + health);
+  }
 }
